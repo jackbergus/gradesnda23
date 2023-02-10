@@ -1,0 +1,3 @@
+[submodule "competitors/declaredesigner"]
+	path = competitors/declaredesigner
+	url = https://github.com/processmining/synthetic-log-generator
