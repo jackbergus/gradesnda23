@@ -1,0 +1,17 @@
+AlternateResponse
+AlternatePrecedence
+Init
+Existence
+Absence
+Choice
+ExclusiveChoice
+RespondedExistence
+ChainPrecedence
+ChainResponse
+Response
+Precedence
+NotResponse
+NotChainPrecedence
+NotRespondedExistence
+NotChainResponse
+NotPrecedence

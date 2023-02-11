@@ -1,0 +1,30 @@
+absence
+absence2
+absence3
+alternate precedence
+alternate response
+alternate succession
+chain precedence
+chain response
+chain succession
+choice
+co-existence
+exactly1
+exactly2
+exclusive choice
+existence
+existence2
+existence3
+init
+not chain succession
+not co-existence
+not succession
+precedence
+response
+responded existence
+succession
+not chain precedence
+not chain response
+not precedence
+not response
+not responded existence

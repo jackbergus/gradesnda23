@@ -1,0 +1,8 @@
+nglobal var "s" [ 1 : 20 ]
+sglobal var "d" [ "w" "a" "c" "z" ]
+"Absence" ( "A" , "A" . var "s" > 10 )
+"Absence" ( "B" , "B" . var "s" < 15 )
+"Absence" ( "C" , "C" . var "s" = 5 )
+"Absence" ( "D" , "D" . var "s" = 17 )
+"Absence" ( "E" , true )
+"ChainResponse" ( "A" , "A" . var "s" < 10, "B", "B" . var "s" < 20)

@@ -1,3 +1,6 @@
 [submodule "competitors/declaredesigner"]
 	path = competitors/declaredesigner
 	url = https://github.com/processmining/synthetic-log-generator
+[submodule "competitors/minerful"]
+	path = competitors/minerful
+	url = https://github.com/cdc08x/MINERful
