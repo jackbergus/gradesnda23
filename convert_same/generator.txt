@@ -1,11 +1,11 @@
 nglobal var "s" [ 1 : 20 ]
-sglobal var "d" [ "w" "a" "c" "z" ]
+nglobal var "d" [ 1 : 3 ]
 event "A" { var "s" }
 event "B" { var "s" var "d" }
 event "C" { var "d" }
 event "D" { var "s" }
 event "E" { }
-template "Absence" # 1
-template "Choice" # 2
+template "Init" # 1
+template "Response" # 2
 template "RespExistence" #2
 template "ChainResponse" #2

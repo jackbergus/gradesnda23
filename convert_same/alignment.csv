@@ -1,31 +1,29 @@
 minerful,alloy,knobab
-absence,Absence,Absence1
-absence2,--,Absence2
-absence3,--,Absence3
-alternate precedence,AlternatePrecedence,AltPrecedence
-alternate response,AlternateResponse,AltResponse
-alternate succession,--,AltSuccession
-chain precedence,ChainPrecedence,ChainPrecedence
-chain response,ChainResponse,ChainResponse
-chain succession,--,ChainSuccession
-choice,Choice,Choice
+--,Absence,Absence1
+Absence2,--,Absence2
+Absence3,--,Absence3
+AlternatePrecedence,AlternatePrecedence,AltPrecedence
+AlternateResponse,AlternateResponse,AltResponse
+AlternateSuccession,--,AltSuccession
+ChainPrecedence,ChainPrecedence,ChainPrecedence
+ChainResponse,ChainResponse,ChainResponse
+ChainSuccession,--,ChainSuccession
+--,Choice,Choice
 co-existence,--,CoExistence
-exactly1,--,--
-exactly2,--,--
-exclusive choice,ExclusiveChoice,ExclChoice
-existence,Existence,Exists1
-existence2,--,Exists2
-existence3,--,Exists3
-init,Init,Init
-not chain succession,--,--
-not co-existence,--,--
-not succession,--,--
-precedence,Precedence,Precedence
-response,Response,Response
-responded existence,RespondedExistence,RespExistence
-succession,--,Succession
-not chain precedence,NotChainPrecedence,--
-not chain response,NotChainResponse,--
-not precedence,NotPrecedence,--
-not response,NotResponse,--
-not responded existence,NotRespondedExistence,--
+--,ExclusiveChoice,ExclChoice
+--,Existence,Exists1
+Existence2,--,Exists2
+Existence3,--,Exists3
+Init,Init,Init
+NotChainSuccession,--,--
+NotCoExistence,--,--
+NotSuccession,--,--
+Precedence,Precedence,Precedence
+Response,Response,Response
+Responded_Existence,RespondedExistence,RespExistence
+Succession,--,Succession
+NotChainPrecedence,NotChainPrecedence,--
+NotChainResponse,NotChainResponse,--
+NotPrecedence,NotPrecedence,--
+NotResponse,NotResponse,--
+NotRespondedExistence,NotRespondedExistence,--

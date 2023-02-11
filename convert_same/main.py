@@ -1,6 +1,8 @@
 import csv
 import os
 import sys
+import time
+
 import numpy as np
 
 from activities.AlloyGenDeclFormat import alloy_gen_decl_format_dump, alloy_command, alloy_run
@@ -63,6 +65,8 @@ def benchmark(type,ls, acts, conf, minL=10, maxL=20, logS=10000):
             writer.writerow(['ExperimentName', 'minL', 'maxL', 'logS', 'algorithm', 'time'])  # file doesn't exist yet, write a header
         with open(experiment_name+".decl2", "w") as text_file:
             text_file.write(alloy_gen_decl_format_dump(ls, acts, d))
+        while not os.path.exists(experiment_name+".decl2"):
+            time.sleep(1)
         alloy_run(alloy_script, minL, maxL, logS, experiment_name, alloy_wd, writer)
         with open(experiment_name+".powerdecl", "w") as text_file:
             text_file.write(powerdecl_dump(ls))
@@ -72,6 +76,8 @@ def benchmark(type,ls, acts, conf, minL=10, maxL=20, logS=10000):
             text_file.write(powerdecl_sigma(acts))
         with open(experiment_name+".json", "w") as text_file:
             text_file.write(minerful_dump(ls, acts, d))
+        while not os.path.exists(experiment_name+".json"):
+            time.sleep(1)
         minerful_run(minerful_script, minL, maxL, logS, experiment_name, minerful_wd, writer)
 
 if __name__ == '__main__':
