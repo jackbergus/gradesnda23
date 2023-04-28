@@ -4,3 +4,6 @@
 [submodule "competitors/minerful"]
 	path = competitors/minerful
 	url = https://github.com/cdc08x/MINERful
+[submodule "competitors/knobab"]
+	path = competitors/knobab
+	url = https://github.com/datagram-db/knobab
