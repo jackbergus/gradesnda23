@@ -1,0 +1,29 @@
+nglobal var "a" [ 31 : 39 ]
+nglobal var "b" [ 14 : 93 ]
+nglobal var "c" [ 51 : 62 ]
+nglobal var "d" [ 12 : 20 ]
+nglobal var "e" [ 3 : 9 ]
+event "A"{var "b" var "d" var "a" }
+event "B"{var "c" var "b" var "d" var "a" }
+event "D"{var "a" var "e" }
+event "E"{var "a" var "d" }
+event "F"{var "b" var "d" var "e" var "a" var "c" }
+event "G"{var "c" var "e" var "b" var "d" var "a" }
+event "H"{var "d" var "e" var "a" }
+event "J"{var "e" var "d" }
+event "K"{var "e" var "b" var "d" }
+event "L"{var "c" }
+event "O"{var "c" var "e" var "b" }
+event "P"{var "b" }
+event "Q"{var "e" var "d" var "b" var "a" var "c" }
+event "R"{var "d" var "e" var "a" }
+event "S"{var "e" var "b" }
+event "T"{var "a" var "c" }
+template "AltPrecedence" # 2
+template "AltResponse" # 2
+template "ChainPrecedence" # 2
+template "ChainResponse" # 2
+template "Init" # 1
+template "Precedence" # 2
+template "Response" # 2
+template "RespExistence" # 2

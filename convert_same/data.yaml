@@ -1,0 +1,25 @@
+experiment_name:  "dataful"
+minerful:
+  script:         "run-MINERfulEventLogMaker.sh"
+  wd:             "/home/giacomo/projects/loggen/competitors/minerful/"
+alloy:
+  jar:            "AlloyLogGenerator.jar"
+  wd:             "/home/giacomo/projects/loggen/competitors/AlloyLogGenerator/"
+log_size:
+  base:           10
+  minpow:         4
+  maxpow:         5
+trace_size:
+  base:           10
+  minpow:         2
+  maxpow:         2
+model_size:
+  generate:       false
+  step:           2
+  min:            2
+  max:            10
+benchmark:
+  minerful:       no
+  alloy:          yes
+  timeout:        3600
+  ntimes:         3

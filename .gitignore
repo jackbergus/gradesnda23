@@ -1,3 +1,5 @@
+/convert_same/.idea/*
 /convert_same/venv/
 /convert_same/data/
 /convert_same/benchmarks.csv
+__pycache__/*

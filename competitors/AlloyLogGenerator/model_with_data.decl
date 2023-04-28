@@ -1,6 +1,0 @@
-activity A
-bind A: ji
-activity B
-bind B: ji, tituys
-ji: float between 2 and 807
-tituys: integer between -2 and 999

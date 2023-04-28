@@ -52,7 +52,6 @@ def alloy_gen_decl_format_dump(l, dvc=None, d=None)->str:
         if x.corr is not None:
             d_var[x.corr.var.name] = x.corr.var
             d_var[x.corr.rhs.var.name] = x.corr.rhs.var
-
         for cc in x.ls:
             d_act[cc.label.name] = cc.label
             for var in cc.label.ls:
@@ -63,7 +62,6 @@ def alloy_gen_decl_format_dump(l, dvc=None, d=None)->str:
             for var in cc.collect_vars():
                 if var is not None:
                     d_var[var.name] = var
-
     str = ""
     for x in d_act:
         a = d_act[x]
@@ -76,16 +74,27 @@ def alloy_gen_decl_format_dump(l, dvc=None, d=None)->str:
 def alloy_command(jar_path, minL, maxL, logS, logName):
     return "java -jar %s %d %d %d %s.decl2 %s.out.xes -eld -shuffle 2" % (jar_path, minL, maxL, logS, logName, logName)
 
-def alloy_run(jar_path, minL, maxL, logS, logName, wd, csv):
+def alloy_run(jar_path, minL, maxL, logS, logName, wd, csv, model_size, timeout=None):
     cwd = os.getcwd()
     os.chdir(wd)
     cmd = ['java', '-jar', jar_path, str(minL), str(maxL), str(logS), os.path.join(cwd, logName+".decl2"), os.path.join(cwd, logName+".out.xes"), '-eld', '-shuffle', '2']
-    print(" ".join(cmd))
+    # print(" ".join(cmd))
     timeStarted = time.time()
     from subprocess import Popen, PIPE
     import subprocess
-    ans = subprocess.check_output(cmd, input=b'\r\n')
-    timeDelta = time.time() - timeStarted
-    timeDelta = timeDelta * 1000.0 # time in milliseconds
+    breakMe=False
+    timeDelta = None
+    try:
+        ans = subprocess.check_output(cmd, input=b'\r\n', timeout=timeout)
+        #output = subprocess.run(cmd, stdout=subprocess.PIPE, timeout=timeout).stdout.decode('utf-8')
+        timeDelta = time.time() - timeStarted
+        timeDelta = timeDelta * 1000.0  # time in milliseconds
+        os.chdir(cwd)
+        csv.writerow([logName, minL, maxL, logS, model_size, 'alloy', timeDelta])
+    except subprocess.TimeoutExpired:
+        print(f'Timeout for {cmd} ({timeout}s) expired')
+        os.chdir(cwd)
+        csv.writerow([logName, minL, maxL, logS, model_size, 'alloy', timeDelta])
+        breakMe=True
     os.chdir(cwd)
-    csv.writerow([logName, minL, maxL, logS, 'alloy', timeDelta])
+    return breakMe

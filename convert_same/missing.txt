@@ -1,0 +1,5 @@
+Alloy: for trace length 100, log size from 10000 to 100000
+Minerful: [TODO]
+
+For trace length 1000, even for model size 2, AlloyGenerator goes in running time more than one hour.
+So, all of the experiments were just considering the running time until trace length of 100.

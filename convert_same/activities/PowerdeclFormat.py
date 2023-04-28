@@ -85,7 +85,7 @@ def powerdecl_format_Declare(d:Declare,dataless=False)->str:
 
 
 def powerdecl_dump(l,dataless=False)->str:
-    return "\n".join(list(map(lambda x: powerdecl_format_Declare(x,dataless=dataless), l)))
+    return "declare\n"+"\n".join(list(map(lambda x: powerdecl_format_Declare(x,dataless=dataless), l)))
 
 def powerdecl_sigma(dvc):
     return "\n".join(list(map(lambda x: x.name, dvc.values())))
