@@ -130,7 +130,7 @@ def data_dump_model_gen(acts, ls, conf, type, i):
 
 
 if __name__ == '__main__':
-    conf = yaml.safe_load(Path('/home/giacomo/projects/loggen/convert_same/data.yaml').read_text())
+    conf = yaml.safe_load(Path('data.yaml').read_text())
     conf["minerful_script"] = conf["minerful"]["script"]
     conf["minerful_wd"] = conf["minerful"]["wd"]
     conf["alloy_jar"] = conf["alloy"]["jar"]
