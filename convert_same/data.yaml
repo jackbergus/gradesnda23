@@ -1,10 +1,10 @@
 experiment_name:  "dataful"
 minerful:
   script:         "run-MINERfulEventLogMaker.sh"
-  wd:             "/home/giacomo/projects/loggen/competitors/minerful/"
+  wd:             "../competitors/minerful/"
 alloy:
   jar:            "AlloyLogGenerator.jar"
-  wd:             "/home/giacomo/projects/loggen/competitors/AlloyLogGenerator/"
+  wd:             "../competitors/AlloyLogGenerator/"
 log_size:
   base:           10
   minpow:         4
